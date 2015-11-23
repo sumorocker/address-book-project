@@ -1,7 +1,7 @@
 var request = require('request');
 var prompt = require('prompt');
 var inquirer = require('inquirer');
-var phoneBook= require('./phonebook').phonebook
+// var phoneBook= require('./phonebook').phonebook
 
 function searchTerm(name) {
     var result = phoneBook.filter(function(e) {
@@ -28,23 +28,23 @@ var questions = [{
 }]
 
 
-// var phoneBook = [{
-//     "first_name": "Allan",
-//     "last_name": "MacDonald",
-//     "email": "macdonald.allan@live.com"
-// }, {
-//     "first_name": "Mark",
-//     "last_name": "Walberg",
-//     "email": "markymark@email.com"
-// }, {
-//     "first_name": "billy",
-//     "last_name": "Holiday",
-//     "email": "sunday@live.com"
-// }, {
-//     "first_name": "Allan",
-//     "last_name": "MacDouglas",
-//     "email": "macdouglas.allan@email.com"
-// }]
+var phoneBook = [{
+    "first_name": "Allan",
+    "last_name": "MacDonald",
+    "email": "macdonald.allan@live.com"
+}, {
+    "first_name": "Mark",
+    "last_name": "Walberg",
+    "email": "markymark@email.com"
+}, {
+    "first_name": "billy",
+    "last_name": "Holiday",
+    "email": "sunday@live.com"
+}, {
+    "first_name": "Allan",
+    "last_name": "MacDouglas",
+    "email": "macdouglas.allan@email.com"
+}]
 
 inquirer.prompt(questions, function(answers) {
     var searchResults = searchTerm(answers.searchWord);
