@@ -4,14 +4,19 @@ var table = new Table();
 var phoneBook = {
     first_name: "Allan",
     last_name: "MacDonald",
-    email: ["home","work","other"],
+    Email: ["home","work","other"],
     home_email: "zippo@live.com",
     work_email: "nothing@hotmail.com",
     other_email: "everything@live.com",
-    address: ["home","work","other"],
+    Addresses: ["home","work","other"],
     home_address: "anywhere",
     work_address: "142 Rushton Rd",
-    home_address: "1550 Ave Docteur Penfield"
+    other_address: "1550 Ave Docteur Penfield",
+    Number: ["home","work","other"],
+    home_number: "514-660-9279",
+    work_number: "514-990-2234",
+    other_number: "514-802-3045"
+    
     
 }
 
@@ -20,35 +25,31 @@ table.push(
     {'Last Name': phoneBook.last_name}
     );
 
-    if(phoneBook.email.indexOf('work') >-1){
+    if(phoneBook.Email.indexOf('work','home','other') >-1){
         table.push({
-            'work email': phoneBook.work_email
+            'Emails': 'work: '+phoneBook.work_email+"\n"+'home: '+phoneBook.home_email+"\n"+'other: '+phoneBook.other_email
+            });
+    }
+    
+    if(phoneBook.Addresses.indexOf('work')>-1){
+        table.push({
+            'Work Address': phoneBook.work_address
         });
     }
-    if(phoneBook.email.indexOf('home') >-1){
+    if(phoneBook.Addresses.indexOf('home')>-1){
         table.push({
-            'home email': phoneBook.home_email
+            'Home Address': phoneBook.home_address
         });
     }
-    if(phoneBook.email.indexOf('other') >-1){
+    if(phoneBook.Addresses.indexOf('other')>-1){
         table.push({
-            'other email': phoneBook.other_email
+            'Other Address': phoneBook.other_address
         });
     }
     
-    if (phoneBook.address.indexOf('work') >-1){
+    if(phoneBook.Number.indexOf('other')>-1){
         table.push({
-            'work address': phoneBook.work_address
-        });
-    }
-    if(phoneBook.address.indexOf('home')>-1){
-        table.push({
-            'home address': phoneBook.home_address
-        });
-    }
-    if(phoneBook.address.indexOf('other')>-1){
-        table.push({
-            'other address': phoneBook.other_address
+            'Numbers': 'work: '+phoneBook.work_number+"\n"+ 'home: '+phoneBook.home_number+"\n"+ 'other: '+phoneBook.other_number
         });
     }
     
